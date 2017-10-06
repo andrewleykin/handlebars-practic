@@ -3,7 +3,7 @@
   
   $.ajax({
     url: 'data.json'
-  }).done(function(){
+  }).done(function(data){
     var json = JSON.parse(data);
     var source   = $("#news").html();
     var template = Handlebars.compile(source);
