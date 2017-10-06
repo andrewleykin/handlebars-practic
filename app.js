@@ -4,6 +4,9 @@
   $.ajax({
     url: 'data.json'
   }).done(function(){
-    console.log(data);
+    var json = JSON.parse(data);
+    var source   = $("#news").html();
+    var template = Handlebars.compile(source);
+    var html    = template(json);
   })
 })();
