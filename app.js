@@ -8,5 +8,6 @@
     var source   = $("#news").html();
     var template = Handlebars.compile(source);
     var html    = template(json);
+    container.append(html);
   })
 })();
